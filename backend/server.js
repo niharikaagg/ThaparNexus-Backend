@@ -25,6 +25,7 @@ app.use(
   cors({
     origin: "https://thapar-nexus.netlify.app", // Allow requests from your frontend
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"], // Allow required headers
   })
 );
