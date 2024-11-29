@@ -45,7 +45,7 @@ export const signupStudent = async (req, res) => {
     res.cookie("jwt-thaparnexus", token, {
       httpOnly: true, // prevents XSS attack
       maxAge: 3 * 24 * 60 * 60 * 1000, // in ms
-      sameSite: "strict", // prevents CSRF attacks
+      sameSite: "None", // prevents CSRF attacks
       secure: process.env.NODE_ENV === "production", // prevents man-in-the-middle attacks
     });
 
@@ -103,7 +103,7 @@ export const loginStudent = async (req, res) => {
     await res.cookie("jwt-thaparnexus", token, {
       httpOnly: true,
       maxSge: 3 * 24 * 60 * 60 * 1000,
-      sameSite: "strict",
+      sameSite: "None",
       secure: process.env.NODE_ENV === "production",
     });
 
@@ -165,7 +165,7 @@ export const signupPlacementTeam = async (req, res) => {
     res.cookie("jwt-thaparnexus", token, {
       httpOnly: true,
       maxAge: 3 * 24 * 60 * 60 * 1000,
-      sameSite: "strict",
+      sameSite: "None",
       secure: process.env.NODE_ENV === "production",
     });
 
@@ -202,7 +202,7 @@ export const loginPlacementTeam = async (req, res) => {
     await res.cookie("jwt-thaparnexus", token, {
       httpOnly: true,
       maxSge: 3 * 24 * 60 * 60 * 1000,
-      sameSite: "strict",
+      sameSite: "None",
       secure: process.env.NODE_ENV === "production",
     });
 
