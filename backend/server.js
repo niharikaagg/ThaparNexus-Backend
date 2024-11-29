@@ -21,12 +21,11 @@ app.use(
   })
 );
 
-app.use(
+app.options(
+  "*",
   cors({
-    origin: "https://thapar-nexus.netlify.app", // Allow requests from your frontend
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    origin: "https://thapar-nexus.netlify.app", // Ensure that the preflight also allows the Netlify domain
     credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"], // Allow required headers
   })
 );
 
