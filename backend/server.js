@@ -21,6 +21,14 @@ app.use(
   })
 );
 
+app.use(
+  cors({
+    origin: "https://thapar-nexus.netlify.app", // Allow requests from your frontend
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"], // Allow required headers
+  })
+);
+
 app.use(express.json());
 app.use(cookieParser());
 
